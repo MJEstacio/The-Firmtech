@@ -67,10 +67,15 @@ h5 {
 body {
   font-family: var(--DMSans-Regular);
   color: var(--primary-color);
-  width: 100%;
+  min-width: 100vw;
   scroll-behavior: smooth;
 }
 
+section {
+  width: 100%;
+}
+
+/* Header */
 .header {
   width: 100%;
   background-color: var(--white);
@@ -99,6 +104,7 @@ nav .logo {
 nav ul {
   display: flex;
   gap: 2rem;
+  position: relative;
 }
 nav ul li {
   display: flex;
@@ -122,7 +128,7 @@ nav ul li:last-child {
   transition: 0.5s;
 }
 nav ul li:last-child:hover {
-  border: var(--orange);
+  border: 1px solid var(--orange);
   background-color: var(--white);
 }
 nav ul li:last-child:hover a {
@@ -132,6 +138,7 @@ nav ul li:last-child a {
   color: var(--white);
 }
 
+/* Hero Section */
 #hero {
   position: relative;
   width: 100%;
@@ -476,7 +483,9 @@ footer .container .middle {
 }
 footer .container .middle .bottom-logo {
   display: flex;
-  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  width: 100%;
   font-family: var(--BebasNeue);
   font-size: var(--font-large);
   color: var(--white);
@@ -488,6 +497,9 @@ footer .container .middle p {
 }
 
 @media (max-width: 1440px) {
+  .container {
+    width: 80%;
+  }
   nav,
 .container {
     width: 80%;
@@ -495,13 +507,195 @@ footer .container .middle p {
   #hero .container {
     width: 60%;
   }
-  .container {
+  #contacts .container {
     width: 80%;
+  }
+  #contacts .container form {
+    width: 60%;
+  }
+  footer .container {
+    width: 80%;
+  }
+  footer .container div ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+@media (max-width: 1040px) {
+  nav {
+    width: 80%;
+  }
+  nav ul {
+    display: none;
+  }
+  #hero .container {
+    width: 80%;
+  }
+  #our-process .container .steps {
+    flex-direction: column;
+  }
+  #our-process .container .steps .step {
+    width: 50%;
+    margin: auto;
+  }
+  #tech-stack .container {
+    flex-direction: column;
+  }
+  #tech-stack .container .left {
+    flex-direction: column;
+    align-items: center;
+  }
+  #tech-stack .container .left .img {
+    display: flex;
+  }
+  #tech-stack .container .right {
+    order: 1;
+  }
+}
+@media (max-width: 768px) {
+  nav {
+    width: 90%;
+  }
+  nav ul {
+    display: none;
+  }
+  #hero .container {
+    width: 80%;
+  }
+  #hero .container h1 {
+    width: 80%;
+  }
+  #about-us .container {
+    width: 60%;
+  }
+  #our-services .container .designs {
+    flex-direction: column;
+  }
+  #our-process .container .steps {
+    flex-direction: column;
+  }
+  #tech-stack .container {
+    flex-direction: column;
+  }
+  #tech-stack .container .left {
+    flex-direction: column;
+    align-items: center;
+  }
+  #tech-stack .container .left .img {
+    display: flex;
+  }
+  #tech-stack .container .right {
+    order: 1;
+  }
+  #the-firm-tech-crews .container .crews {
+    flex-direction: column;
+  }
+  #the-firm-tech-crews .container .crews .crew {
+    width: 50%;
+    margin: auto;
   }
   #contacts .container {
     width: 80%;
   }
-  footer .container {
+  #contacts .container form {
     width: 80%;
+  }
+  footer .container {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .container .left {
+    order: 2;
+  }
+  footer .container .left div ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  footer .container .middle {
+    order: 1;
+  }
+}
+@media (max-width: 480px) {
+  nav {
+    width: 100%;
+    padding: 1rem;
+  }
+  nav ul {
+    display: none;
+  }
+  #hero .container {
+    align-items: center;
+    width: 100%;
+  }
+  #hero .container h1 {
+    width: 90%;
+    font-size: 48px;
+    text-align: center;
+  }
+  #hero .container p {
+    width: 60%;
+    text-align: center;
+  }
+  #about-us .container {
+    width: 90%;
+  }
+  #our-process .container .steps {
+    flex-direction: column;
+  }
+  #our-process .container .steps .step {
+    width: 80%;
+  }
+  #tech-stack .container {
+    flex-direction: column;
+  }
+  #tech-stack .container .left {
+    flex-direction: column;
+    align-items: center;
+  }
+  #tech-stack .container .left .img {
+    display: flex;
+  }
+  #tech-stack .container .right {
+    order: 1;
+  }
+  #tech-stack .container .right h3 {
+    text-align: center;
+  }
+  #tech-stack .container .right p {
+    text-align: center;
+  }
+  #the-firm-tech-crews .container .crews {
+    flex-direction: column;
+  }
+  #the-firm-tech-crews .container .crews .crew {
+    width: 60%;
+    margin: auto;
+  }
+  #contacts .container {
+    width: 90%;
+  }
+  #contacts .container form {
+    width: 100%;
+  }
+  footer .container {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .container .left {
+    order: 2;
+    width: 90%;
+  }
+  footer .container .left div ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  footer .container .middle {
+    order: 1;
+    width: 90%;
   }
 }/*# sourceMappingURL=styles.css.map */

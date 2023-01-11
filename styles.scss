@@ -70,9 +70,13 @@ h5 {
 body {
   font-family: var(--DMSans-Regular);
   color: var(--primary-color);
-  width: 100%;
+  min-width: 100vw;
   scroll-behavior: smooth;
 }
+section {
+  width: 100%;
+}
+/* Header */
 .header {
   width: 100%;
   background-color: var(--white);
@@ -100,6 +104,7 @@ nav {
   ul {
     display: flex;
     gap: 2rem;
+    position: relative;
     li {
       display: flex;
       align-items: center;
@@ -121,7 +126,7 @@ nav {
         transition: 0.5s;
 
         &:hover {
-          border: var(--orange);
+          border: 1px solid var(--orange);
           background-color: var(--white);
 
           a {
@@ -135,7 +140,7 @@ nav {
     }
   }
 }
-
+/* Hero Section */
 #hero {
   position: relative;
   width: 100%;
@@ -253,7 +258,6 @@ nav {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-
     gap: 5rem;
     .left {
       display: flex;
@@ -265,6 +269,7 @@ nav {
       .img {
         display: flex;
         width: 200px;
+
         height: 150px;
         img {
           max-width: 100%;
@@ -473,7 +478,6 @@ footer {
   .container {
     display: flex;
     width: 60%;
-
     div {
       width: 40%;
       ul {
@@ -496,7 +500,9 @@ footer {
       width: 40%;
       .bottom-logo {
         display: flex;
-        align-items: center;
+        gap: 0.5rem;
+        justify-content: center;
+        width: 100%;
         font-family: var(--BebasNeue);
         font-size: var(--font-large);
         color: var(--white);
@@ -511,6 +517,9 @@ footer {
 }
 
 @media (max-width: 1440px) {
+  .container {
+    width: 80%;
+  }
   nav,
   .container {
     width: 80%;
@@ -520,17 +529,255 @@ footer {
       width: 60%;
     }
   }
-  .container {
-    width: 80%;
-  }
+
   #contacts {
     .container {
       width: 80%;
+      form {
+        width: 60%;
+      }
     }
   }
   footer {
     .container {
       width: 80%;
+      div {
+        ul {
+          flex-direction: column;
+          align-items: center;
+          gap: 1rem;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1040px) {
+  nav {
+    width: 80%;
+    ul {
+      display: none;
+    }
+  }
+  #hero {
+    .container {
+      width: 80%;
+    }
+  }
+  #our-process {
+    .container {
+      .steps {
+        flex-direction: column;
+        .step {
+          width: 50%;
+          margin: auto;
+        }
+      }
+    }
+  }
+  #tech-stack {
+    .container {
+      flex-direction: column;
+      .left {
+        flex-direction: column;
+        align-items: center;
+        .img {
+          display: flex;
+        }
+      }
+      .right {
+        order: 1;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  nav {
+    width: 90%;
+    ul {
+      display: none;
+    }
+  }
+  #hero {
+    .container {
+      width: 80%;
+      h1 {
+        width: 80%;
+      }
+    }
+  }
+  #about-us {
+    .container {
+      width: 60%;
+    }
+  }
+  #our-services {
+    .container {
+      .designs {
+        flex-direction: column;
+      }
+    }
+  }
+  #our-process {
+    .container {
+      .steps {
+        flex-direction: column;
+      }
+    }
+  }
+  #tech-stack {
+    .container {
+      flex-direction: column;
+      .left {
+        flex-direction: column;
+        align-items: center;
+        .img {
+          display: flex;
+        }
+      }
+      .right {
+        order: 1;
+      }
+    }
+  }
+  #the-firm-tech-crews {
+    .container {
+      .crews {
+        flex-direction: column;
+        .crew {
+          width: 50%;
+          margin: auto;
+        }
+      }
+    }
+  }
+  #contacts {
+    .container {
+      width: 80%;
+      form {
+        width: 80%;
+      }
+    }
+  }
+  footer {
+    .container {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      .left {
+        order: 2;
+        div {
+          ul {
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+          }
+        }
+      }
+      .middle {
+        order: 1;
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  nav {
+    width: 100%;
+    padding: 1rem;
+    ul {
+      display: none;
+    }
+  }
+  #hero {
+    .container {
+      align-items: center;
+      width: 100%;
+      h1 {
+        width: 90%;
+        font-size: 48px;
+        text-align: center;
+      }
+      p {
+        width: 60%;
+        text-align: center;
+      }
+    }
+  }
+  #about-us {
+    .container {
+      width: 90%;
+    }
+  }
+  #our-process {
+    .container {
+      .steps {
+        flex-direction: column;
+        .step {
+          width: 80%;
+        }
+      }
+    }
+  }
+  #tech-stack {
+    .container {
+      flex-direction: column;
+
+      .left {
+        flex-direction: column;
+        align-items: center;
+        .img {
+          display: flex;
+        }
+      }
+      .right {
+        order: 1;
+        h3 {
+          text-align: center;
+        }
+        p {
+          text-align: center;
+        }
+      }
+    }
+  }
+  #the-firm-tech-crews {
+    .container {
+      .crews {
+        flex-direction: column;
+        .crew {
+          width: 60%;
+          margin: auto;
+        }
+      }
+    }
+  }
+  #contacts {
+    .container {
+      width: 90%;
+      form {
+        width: 100%;
+      }
+    }
+  }
+  footer {
+    .container {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      .left {
+        order: 2;
+        width: 90%;
+        div {
+          ul {
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+          }
+        }
+      }
+      .middle {
+        order: 1;
+        width: 90%;
+      }
     }
   }
 }
