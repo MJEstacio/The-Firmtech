@@ -70,7 +70,7 @@ h5 {
 body {
   font-family: var(--DMSans-Regular);
   color: var(--primary-color);
-  min-width: 100vw;
+
   scroll-behavior: smooth;
 }
 section {
@@ -82,8 +82,6 @@ section {
   background-color: var(--white);
   position: fixed;
   z-index: 5;
-  top: 0;
-  left: 0;
 }
 
 nav {
@@ -351,7 +349,7 @@ nav {
 #the-firm-tech-crews {
   margin: 3rem 0;
   display: flex;
-
+  width: 100%;
   .container {
     display: flex;
     flex-direction: column;
@@ -360,10 +358,11 @@ nav {
       margin: 0 0 5rem 0;
     }
     .crews {
+      width: 100%;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
-      gap: 5rem;
+      gap: 2rem;
       .crew {
         display: flex;
         flex-direction: column;
@@ -752,6 +751,9 @@ footer {
   }
   #contacts {
     .container {
+      h3 {
+        font-size: 32px;
+      }
       width: 90%;
       form {
         width: 100%;
