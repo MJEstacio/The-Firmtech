@@ -46,16 +46,6 @@
   margin: auto;
 }
 
-.overlay {
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.6);
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  z-index: 0;
-}
-
 .flex {
   display: flex;
   flex-direction: column;
@@ -85,11 +75,11 @@ h5 {
 body {
   font-family: var(--DMSans-Regular);
   color: var(--primary-color);
-  scroll-behavior: smooth;
 }
 
 section {
   width: 100%;
+  scroll-behavior: smooth;
 }
 
 /* Header */
@@ -158,7 +148,7 @@ nav .nav-btn {
   position: relative;
   justify-content: center;
   align-items: center;
-  width: 80px;
+  width: 60px;
   height: 60px;
   cursor: pointer;
   position: absolute;
@@ -170,16 +160,16 @@ nav .nav-btn {
 }
 nav .nav-btn .nav-btn-burger {
   display: flex;
-  width: 50px;
-  height: 6px;
+  width: 40px;
+  height: 5px;
   background-color: black;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
   transition: all 0.5s ease-in-out;
 }
 nav .nav-btn .nav-btn-burger::before, nav .nav-btn .nav-btn-burger::after {
-  width: 50px;
-  height: 6px;
+  width: 40px;
+  height: 5px;
   position: absolute;
   content: "";
   background-color: black;
@@ -188,10 +178,10 @@ nav .nav-btn .nav-btn-burger::before, nav .nav-btn .nav-btn-burger::after {
   transition: all 0.5s ease-in-out;
 }
 nav .nav-btn .nav-btn-burger::before {
-  transform: translateY(-16px);
+  transform: translateY(-12px);
 }
 nav .nav-btn .nav-btn-burger::after {
-  transform: translateY(16px);
+  transform: translateY(12px);
 }
 nav .open .nav-btn-burger {
   transform: translateX(-50px);
@@ -430,7 +420,7 @@ nav .open .nav-btn-burger::after {
 #the-firm-tech-crews .container .crews .crew {
   display: flex;
   flex-direction: column;
-  width: 20%;
+  width: 30%;
 }
 #the-firm-tech-crews .container .crews .crew img {
   border-radius: 10px;

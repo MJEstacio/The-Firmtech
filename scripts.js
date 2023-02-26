@@ -1,20 +1,20 @@
-'use strict'
-const navBtn = document.querySelector('.nav-btn')
-let navOpen = false
-const navbar = document.querySelector('.nav-links')
-const overlay = document.querySelector('.overlay')
+'use strict';
+const navBtn = document.querySelector('.nav-btn');
+let navOpen = false;
+const navbar = document.querySelector('.nav-links');
+
+
 
 navBtn.addEventListener('click', () => {
   if (!navOpen) {
-    navBtn.classList.add('open')
-    navOpen = true
-    navbar.classList.add('show')
-    overlay.classList.remove('hidden')
-  } else {
-    navBtn.classList.remove('open')
-    navbar.classList.remove('show')
+    navBtn.classList.add('open');
+    navOpen = true;
+    navbar.classList.add('show');
 
-    navOpen = false
-    overlay.classList.add('hidden')
+  } else {
+    navBtn.classList.remove('open');
+    navbar.classList.remove('show');
+    navOpen = false;
+
   }
-})
+});
